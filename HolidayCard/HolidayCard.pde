@@ -1,6 +1,7 @@
 Snow[] s = new Snow[500];
 boolean addWind= false;
 boolean stop=false;
+boolean re =false;
 float x=0;
    float y=0;
 
@@ -19,13 +20,11 @@ void draw(){
  background(0);
  fill(0,0,0);
  
-   fill(100,100,100);
-   textSize(100);
-   text("Merry Christmas", 100, 300);
  
  if(stop){
   pileUp(); 
  }
+
 
  for(int i=0; i<s.length; i++){
   s[i].move();
@@ -34,12 +33,13 @@ void draw(){
    stop=true;
   }
 }
- 
-
+ fill(0,0,0);
+textSize(50);
+text("Merry Christmas", 300,300);
 }
  void mousePressed(){
    
-  addWind=true; 
+  addWind=true;
  }
  
  void pileUp(){
@@ -48,15 +48,7 @@ void draw(){
    x+=4.6;
    y+=4.6;
    ellipse(1300,1300,x,y);
-   if(x>4000){
-    finish(); 
-   }
+  
    
  }
- void finish(){
-  fill(100,100,100);
-   textSize(100);
-   text("Merry Christmas", 100, 300);
-  
- }
- 
+
