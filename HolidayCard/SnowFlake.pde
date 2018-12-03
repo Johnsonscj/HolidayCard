@@ -27,7 +27,7 @@ class SnowFlake implements Snow{
      yPos=random(-100,0); 
     }
     if(xPos>=1000){
-      xPos=random(-100,900);
+      xPos=random(-600,0);
     }
     yPos+=speed;
     xPos+=speedX;
